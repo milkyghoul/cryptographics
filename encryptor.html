@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн шифровщик</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Онлайн шифровщик</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="methods.html">Методы шифрования</a>
+            <a href="encryptor.html">Онлайн шифровщик</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Зашифруйте свое сообщение</h2>
+        <form onsubmit="encryptMessage(); return false;">
+            <label for="message">Сообщение:</label>
+            <input type="text" id="message" placeholder="Введите сообщение для шифрования" required>
+
+            <label for="method">Выберите метод шифрования:</label>
+            <select id="method">
+                <option value="caesar">Шифр Цезаря</option>
+                <option value="vigenere">Шифр Виженера</option>
+                <option value="atbash">Шифр Атбаш</option>
+                <option value="vernam">Шифр Вернама (одноразовый блокнот)</option>
+            </select>
+
+            <label for="key">Ключ:</label>
+            <input type="text" id="key" placeholder="Введите ключ шифрования">
+
+            <button type="submit">Зашифровать</button>
+        </form>
+
+        <div id="output"></div>
+    </main>
+    <footer>
+        <p>© 2024 CryptoHub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
